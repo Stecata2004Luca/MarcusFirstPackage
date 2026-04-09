@@ -1,0 +1,24 @@
+---
+title: "Temp_anallysis"
+output: html_document
+---
+
+---
+title: "My Awesome Analysis"
+author: "Marcus Luca"
+date: "Today"
+output: html_document
+---
+
+This Rmarkdown file will make a graph of the MaxTemp data. The code below is 
+tabbed so that it properly knits to the webpage. Make sure you remove the eval=FALSE!!
+
+```{r}
+  library(MarcusFirstPackage)   # load TestPackage, which includes MaxTemp data frame.
+  library(ggplot2)
+  
+  ggplot(MaxTemp, aes(x=Date, y=MaxTemp)) +
+    geom_line()
+```
+  
+We see that the daily max temperature in Flagstaff varies quite a lot.
